@@ -42,8 +42,10 @@ Install TypeScript locally with loaders:
 
 ts-loader helps Webpack compile the TypeScript code using the TypeScript’s standard configuration file named tsconfig.json
 
-source-map-loader uses any sourcemap outputs from TypeScript to inform webpack when generating its own sourcemaps. This will allow you to debug your final output file as if you were debugging your original TypeScript source code
+source-map-loader uses any sourcemap outputs from TypeScript to inform webpack when generating its own sourcemaps. This will allow to debug the final output file as if you were debugging your original TypeScript source code
 
 
-Compile: > tsc fileName.ts
+Compile: 
+> tsc fileName.ts
+> npw webpack
 
