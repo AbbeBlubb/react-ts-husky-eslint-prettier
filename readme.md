@@ -1,6 +1,10 @@
 
 npm --save-dev / -D
 
+https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
+https://webpack.js.org/guides/typescript/
+
+
 
 ## Setup Git
 
@@ -47,5 +51,5 @@ source-map-loader uses any sourcemap outputs from TypeScript to inform webpack w
 
 Compile: 
 > tsc fileName.ts
-> npw webpack
+> npx webpack
 
