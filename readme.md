@@ -1,4 +1,6 @@
 
+# WIP
+
 npm --save-dev / -D
 npm install / i
 
@@ -24,25 +26,18 @@ Initiate package.json: > npm init -y
 
 ## Dependencies
 
-Webpack: 
-- -D
+Webpack -D
 - webpack
 - webpack-cli
 
-React:
+React (-S)
 - react
 - react-dom
-
-React declaration files for TypeScript: 
-- -D
-- @types/react
-- @types/react-dom
 
 
 ## Setup TypeScript, loaders
 
-Install TypeScript locally with loaders:
-- -D
+Install TypeScript locally with loaders -D
 - typescript
 - ts-loader 
 - source-map-loader
@@ -50,6 +45,10 @@ Install TypeScript locally with loaders:
 ts-loader helps Webpack compile the TypeScript code using the TypeScript’s standard configuration file named tsconfig.json
 
 source-map-loader uses any sourcemap outputs from TypeScript to inform webpack when generating its own sourcemaps. This will allow to debug the final output file as if you were debugging your original TypeScript source code
+
+React declaration files for TypeScript -D
+- @types/react
+- @types/react-dom
 
 Compile: 
 > tsc fileName.ts
@@ -78,6 +77,11 @@ Install the VS Code ESLint plug-in
 VS Code -> settings (ctrl+,) -> search for Eslint -> enable "Always show status", "Eslint: Enable", "Eslint > Format: Enable"
 
 VS Code -> settigns (ctrl+,) -> search for Eslint validate -> make sure "Typescript > Validate: Enable" and "Javascript > Validate: Enable" are checked. If they are checked, nothing will be displayed in the settings.json. If they are not enabled, there will be key/values for this in settings.json, set to false.
+
+Console -> Problems
+Console -> Output -> filter: ESLint/Prettier
+
+Set the market on the exact problem, ctrl+. -> quick fix menu opens, including a "show documentation" option
 
 Prettier -D
 - prettier 
