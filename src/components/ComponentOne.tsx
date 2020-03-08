@@ -1,5 +1,17 @@
-import * as React from "react";
+import * as React from 'react';
 
-export const ComponentOne = () => {
-  return <div>Greetings</div>
+export const ComponentOne = (): number => {
+var hello = 'hello'
+return <div>Greetings</div>;
+};
+    
+
+export class ComponentTwo extends React.Component {
+    state={ hello: null }
+
+    render() {
+        return(
+            <p>Text</p>
+        )
+    }
 }
