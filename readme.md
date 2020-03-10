@@ -1,8 +1,17 @@
-# (WIP) Configuration for Prettier with ESLint, using git hooks with Husky, in React project using TS
+# (WIP) Configuration for ESLint with Prettier, using git hooks with Husky for formatting, in React project using TypeScript
 
 
 
 ## Sources
+
+TypeScript/React
+https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
+
+ESLint installation and .eslintrcs.json
+https://eslint.org/docs/user-guide/getting-started
+
+Prettier installation
+https://prettier.io/docs/en/install.html
 
 Prettier with ESLint, TSLint
 https://prettier.io/docs/en/integrating-with-linters.html
