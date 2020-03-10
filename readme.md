@@ -1,5 +1,8 @@
+# (WIP) Configuration for Prettier with ESLint, using git hooks with Husky, in React project using TS
 
-# WIP
+
+
+## Sources
 
 Prettier with ESLint, TSLint
 https://prettier.io/docs/en/integrating-with-linters.html
@@ -7,18 +10,6 @@ https://prettier.io/docs/en/integrating-with-linters.html
 Prettier configuration file:
 https://prettier.io/docs/en/configuration.html
 
-
-## Setup Git
-
-- Initiate .gitignore: > touch .gitignore
-- Add line to .gitignore: > echo 'node_modules' > .gitignore
-- Add line and create file at the seme time: > echo 'node_modules' > .gitignore
-// echo appends a newline on the end of the output
-
-
-## package.json
-
-Initiate package.json: > npm init -y
 
 
 ## Dependencies
@@ -78,10 +69,12 @@ Compile:
 - VS Code -> settigns (ctrl+,) -> search for Eslint validate -> make sure "Typescript > Validate: Enable" and "Javascript > Validate: Enable" are checked. If they are checked, nothing will be displayed in the settings.json. If they are not enabled, there will be key/values for this in settings.json, set to false.
 
 - settings.json (should not be nessessary):
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+```
+   "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+```
 
 
 ### Functionality
@@ -100,8 +93,11 @@ Prettier -D -E
 // We recommend pinning an exact version of prettier in your package.json as we introduce stylistic changes in patch releases
 // -E, --save-exact: Saved dependencies will be configured with an exact version rather than using npm’s default semver range operator.
 
+Or global:
+- npm i -g prettier
 
-Integration with linter -D
+
+Integration with ESLint linter -D
 
 - eslint-config-prettier 
 - eslint-plugin-prettier
@@ -110,18 +106,22 @@ Integration with linter -D
 
 // Use ESLint to run Prettier. eslint-plugin-prettier is a plugin that adds a rule that formats content using Prettier. Add it to your devDependencies, then enable the plugin and rule in .eslintrc.json:
 
+```
 {
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
   }
 }
+```
 
 // Recommended configuration. "plugin:prettier/recommended" exposes a "recommended" configuration that configures both eslint-plugin-prettier and eslint-config-prettier in a single step: 
 
+```
 {
   "extends": ["plugin:prettier/recommended"]
 }
+```
 
 
 ## Git hooks
