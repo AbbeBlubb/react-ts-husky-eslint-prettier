@@ -90,7 +90,9 @@ Compile:
 Prettier -D -E
 
 - npm i -D -E prettier
+
 // We recommend pinning an exact version of prettier in your package.json as we introduce stylistic changes in patch releases
+
 // -E, --save-exact: Saved dependencies will be configured with an exact version rather than using npm’s default semver range operator.
 
 Or global:
