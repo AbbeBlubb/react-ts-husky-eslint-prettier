@@ -10,6 +10,12 @@ https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
 ESLint installation and .eslintrcs.json
 https://eslint.org/docs/user-guide/getting-started
 
+ESLint configuration
+https://eslint.org/docs/user-guide/configuring
+
+ESLint CLI
+https://eslint.org/docs/user-guide/command-line-interface
+
 Prettier installation
 https://prettier.io/docs/en/install.html
 
@@ -69,6 +75,11 @@ Compile:
         + eslint-plugin-promise@4.2.1
         + eslint-plugin-node@11.0.0
 
+### .eslintignore
+
+- In addition to any patterns in a .eslintignore file, ESLint always ignores files in /node_modules/* and /bower_components/*.
+- It's possible to use an alternate file to the .eslintignore using console command
+
 ### Setup VS Code
 
 - Install the VS Code ESLint plug-in
@@ -89,6 +100,11 @@ Compile:
 - Console -> Output -> filter: ESLint/Prettier
 - Set the market on the exact problem, ctrl+. -> quick fix menu opens, including a "show documentation" option
 
+### package.json scrips
+
+See the ESLint docs for CLI
+- "lint:eslint": "eslint src/**/*.{ts,tsx,js}"
+// Gives the errors in the console for the src folder
 
 ## Formatter: Prettier
 

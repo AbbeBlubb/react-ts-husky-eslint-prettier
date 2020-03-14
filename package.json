@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint:ts": "tslint 'src/**/*.{ts,tsx,js}'",
+    "lint:eslint": "eslint src/**/*.{ts,tsx,js}",
+    
     "format": "prettier -c ./.prettierrc --write src/**/*.{ts,tsx,less}",
     "test:format": "tslint -c ./tslint.json src/**/*.{ts,tsx}",
     "tslint:conflicts": "tslint-config-prettier-check ./tslint.json"
