@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint:eslint": "eslint src/**/*.{ts,tsx,js}",
-    
+    "lint:test": "eslint src/**/*.{ts,tsx,js}",
+    "lint:format": "eslint --fix src/**/*.{ts,tsx,js}",
+
     "format": "prettier -c ./.prettierrc --write src/**/*.{ts,tsx,less}",
-    "test:format": "tslint -c ./tslint.json src/**/*.{ts,tsx}",
-    "tslint:conflicts": "tslint-config-prettier-check ./tslint.json"
+    "test:format": "tslint -c ./tslint.json src/**/*.{ts,tsx}"
   },
   "repository": {
     "type": "git",

@@ -102,9 +102,20 @@ Compile:
 
 ### package.json scrips
 
-See the ESLint docs for CLI
-- "lint:eslint": "eslint src/**/*.{ts,tsx,js}"
-// Gives the errors in the console for the src folder
+- See the ESLint docs for CLI
+- Run ESLint from npm script:
+
+```
+  "scripts": {
+    "lint:test": "eslint src/**/*.{ts,tsx,js}",
+    // Gives the errors in the console for the src folder
+    "lint:format": "eslint --fix src/**/*.{ts,tsx,js}",
+    // Automatically fixes as many issues as possible. The remaining unfixed issues are outputted in the terminal
+
+    "format": "prettier -c ./.prettierrc --write src/**/*.{ts,tsx,less}",
+    "test:format": "tslint -c ./tslint.json src/**/*.{ts,tsx}"
+  },
+  ```
 
 ## Formatter: Prettier
 
