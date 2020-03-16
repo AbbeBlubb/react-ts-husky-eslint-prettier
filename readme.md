@@ -1,4 +1,4 @@
-# Configuration for ESLint with Prettier, using git hooks with Husky for formatting, in React project using TypeScript
+# React+TypeScript project with configuration for ESLint+Prettier and git hooks with Husky+lint-staged
 
 
 
