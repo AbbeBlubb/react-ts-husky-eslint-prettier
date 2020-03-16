@@ -1,4 +1,4 @@
-# (WIP) Configuration for ESLint with Prettier, using git hooks with Husky for formatting, in React project using TypeScript
+# Configuration for ESLint with Prettier, using git hooks with Husky for formatting, in React project using TypeScript
 
 
 
@@ -157,10 +157,11 @@ Integration with ESLint -D
 ```
 
 
-## Git hooks
+## Git hooks with Husky and lint-staged
 
-### npm i -D
+### Dependencies
 
+- D
 - husky
 - lint-staged
 - Husky uses git hooks
@@ -171,14 +172,17 @@ Integration with ESLint -D
 - Can be configured in package.json
 - Configuration should be an object where each value is a command to run and it's key is a glob pattern to use for this command
 
-```
-{
-  "lint-staged": {
-    "*": "your-cmd"
-  }
-}
-```
+### Husky configuration
 
+- package.json
+- Husky is not really needed to use lint-staged specifically
+
+## Test it
+
+- My lint-staged runs Prettier, not ESLint
+- "git add" is not needed as a task in lint-staged; lint-staged adds the files after the tasks have been run
+- You need to first make changes to a file and then add them to git. Only those newly added files will be matched against the lint-staged key glob
+- To format files you haven't changed and added, use the npm scripts in package.json
 
 
 ## Deprecated
