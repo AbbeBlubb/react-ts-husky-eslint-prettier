@@ -46,11 +46,11 @@
   },
   "lint-staged": {
     "src/**/*.{html}": [
-      "prettier --write",
+      "prettier -c ./.prettierrc --write",
       "git add"
     ]
   },
-  
+
   "husky": {
     "hooks": {
       "precommit": "lint-staged"
