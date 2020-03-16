@@ -7,7 +7,7 @@
 TypeScript/React
 https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
 
-ESLint installation and .eslintrcs.json
+ESLint installation and .eslintrc.json
 https://eslint.org/docs/user-guide/getting-started
 
 ESLint configuration
@@ -24,6 +24,9 @@ https://prettier.io/docs/en/integrating-with-linters.html
 
 Prettier configuration file:
 https://prettier.io/docs/en/configuration.html
+
+Prettier CLI
+https://prettier.io/docs/en/cli.html
 
 
 
@@ -127,6 +130,7 @@ Prettier -D -E
 
 Or global:
 - npm i -g prettier
+- Prettier in CLI: Don't forget the quotes around the globs! The quotes make sure that Prettier expands the globs rather than your shell, for cross-platform usage. The glob syntax from the glob module is used.
 
 
 Integration with ESLint -D
@@ -155,6 +159,25 @@ Integration with ESLint -D
 
 ## Git hooks
 
+### npm i -D
+
+- husky
+- lint-staged
+- Husky uses git hooks
+- lint-staged lets you run a linter against staged git files, that is, only files that have been changed since tha last commit. In comparision to run the linter against all files.
+
+### lint-staged configuration
+
+- Can be configured in package.json
+- 
+
+```
+{
+  "lint-staged": {
+    "*": "your-cmd"
+  }
+}
+```
 
 
 

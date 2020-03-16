@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint:test": "eslint src/**/*.{ts,tsx,js}",
-    "lint:format": "eslint --fix src/**/*.{ts,tsx,js}",
-
-    "format": "prettier -c ./.prettierrc --write src/**/*.{ts,tsx,less}",
-    "test:format": "tslint -c ./tslint.json src/**/*.{ts,tsx}"
+    "eslint:test": "eslint src/**/*.{ts,tsx}",
+    "eslint:format": "eslint --fix src/**/*.{ts,tsx}",
+    "prettier:test": "prettier -c ./.prettierrc src/**/*.{ts,tsx,js,json,css,less,sass,scss,less,html,md}",
+    "prettier:format": "prettier -c ./.prettierrc --write src/**/*.{ts,tsx,js,json,css,sass,scss,less,htlm,md}",
+    "p:test-file": "prettier -c ./.prettierrc --write ./src/components/markup.html"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "prettier": "1.19.1",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.1",
@@ -41,5 +43,12 @@
   "dependencies": {
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,json,css,sass,scss,less,htlm,md}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
   }
 }
