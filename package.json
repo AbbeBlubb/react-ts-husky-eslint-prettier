@@ -50,9 +50,8 @@
     }
   },
   "lint-staged": {
-    "./src/**/*.html": [
-      "prettier -c ./.prettierrc --write",
-      "echo hello"
+    "/src/**/*.{ts,tsx,js,json,css,sass,scss,less,html,md}": [
+      "prettier -c ./.prettierrc --write"
     ]
   }
 }
