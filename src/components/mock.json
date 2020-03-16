@@ -8,6 +8,6 @@
         "eslint:format": "eslint --fix src/**/*.{ts,tsx}",
         "prettier:test": "prettier -c ./.prettierrc src/**/*.{ts,tsx,js,json}",
         "prettier:format": "prettier -c ./.prettierrc --write src/**/*.{ts,tsx,js,json}",
-                    "abc": "prettier -c ./.prettierrc stylesheet.css"
+        "abc": "prettier -c ./.prettierrc stylesheet.css"
     }
 }
