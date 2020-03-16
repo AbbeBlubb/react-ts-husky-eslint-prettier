@@ -169,7 +169,7 @@ Integration with ESLint -D
 ### lint-staged configuration
 
 - Can be configured in package.json
-- 
+- Configuration should be an object where each value is a command to run and it's key is a glob pattern to use for this command
 
 ```
 {

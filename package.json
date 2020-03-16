@@ -45,10 +45,14 @@
     "react-dom": "^16.13.0"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx,js,json,css,sass,scss,less,htlm,md}": [
-      "eslint --fix",
+    "./src/components/markup.html": [
       "prettier --write",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
   }
 }
