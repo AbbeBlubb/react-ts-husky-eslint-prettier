@@ -28,6 +28,12 @@ https://prettier.io/docs/en/configuration.html
 Prettier CLI
 https://prettier.io/docs/en/cli.html
 
+lint-staged
+https://github.com/okonet/lint-staged
+
+husky
+https://github.com/typicode/husky
+
 
 
 ## Dependencies
