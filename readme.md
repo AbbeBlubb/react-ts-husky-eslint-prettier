@@ -183,7 +183,7 @@ Integration with ESLint -D
 - package.json
 - Husky is not really needed to use lint-staged specifically
 
-## Test it
+### Test it
 
 - My lint-staged runs Prettier, not ESLint
 - "git add" is not needed as a task in lint-staged; lint-staged adds the files after the tasks have been run
