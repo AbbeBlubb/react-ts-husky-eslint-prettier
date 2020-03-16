@@ -7,7 +7,7 @@
     "eslint:test": "eslint src/**/*.{ts,tsx}",
     "eslint:format": "eslint --fix src/**/*.{ts,tsx}",
     "prettier:test": "prettier -c ./.prettierrc src/**/*.{ts,tsx,js,json,css,less,sass,scss,less,html,md}",
-    "prettier:format": "prettier -c ./.prettierrc --write src/**/*.{ts,tsx,js,json,css,sass,scss,less,htlm,md}",
+    "prettier:format": "prettier -c ./.prettierrc --write src/**/*.{ts,tsx,js,json,css,sass,scss,less,html,md}",
     "p:test-file": "prettier -c ./.prettierrc --write ./src/components/markup.html"
   },
   "repository": {
@@ -50,6 +50,7 @@
       "git add"
     ]
   },
+  
   "husky": {
     "hooks": {
       "precommit": "lint-staged"
