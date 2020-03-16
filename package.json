@@ -44,16 +44,15 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "./src/**/*.html": [
       "prettier -c ./.prettierrc --write",
       "echo hello"
     ]
-  },
-
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
