@@ -45,9 +45,8 @@
     "react-dom": "^16.13.0"
   },
   "lint-staged": {
-    "src/**/*.{html}": [
-      "prettier -c ./.prettierrc --write",
-      "git add"
+    "src/**/*.{html,css}": [
+      "prettier -c ./.prettierrc --write"
     ]
   },
 
