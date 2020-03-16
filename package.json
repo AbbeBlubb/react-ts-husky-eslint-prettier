@@ -51,7 +51,7 @@
   },
   "lint-staged": {
     "./src/**/*.html": [
-      "prettier -c ./.prettierrc --write",
+      "npm run p:test-file",
       "echo hello"
     ]
   }
