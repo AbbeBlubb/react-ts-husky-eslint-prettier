@@ -1,4 +1,4 @@
-# React+TypeScript project with configuration for ESLint+Prettier and git hooks with Husky+lint-staged
+# Boilerplate configurated project: React with TypeScript, ESLint + Prettier, and git hooks with Husky + lint-staged
 
 
 
