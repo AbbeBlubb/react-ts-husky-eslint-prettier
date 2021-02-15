@@ -1,4 +1,4 @@
-# Boilerplate configurated project: React with TypeScript, ESLint + Prettier, and git hooks with Husky + lint-staged
+# Boilerplate configurated project: React with TypeScript, Webpack, ESLint + Prettier, Git Hooks with Husky + lint-staged
 
 
 
