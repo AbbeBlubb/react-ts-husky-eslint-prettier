@@ -1,6 +1,4 @@
-# Frontend boilerplate: TypeScript, React, Webpack, Husky, lint-staged, ESLint, Prettier
-
-
+# Boilerplate configurated project: React with TypeScript, Webpack, ESLint + Prettier, Git Hooks with Husky + lint-staged
 
 ## Sources
 
