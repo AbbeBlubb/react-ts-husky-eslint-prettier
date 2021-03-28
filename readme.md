@@ -3,84 +3,90 @@
 ## Sources
 
 TypeScript/React
-https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
+<https://www.typescriptlang.org/docs/handbook/react-&-webpack.html>
 
 ESLint installation and .eslintrc.json
-https://eslint.org/docs/user-guide/getting-started
+<https://eslint.org/docs/user-guide/getting-started>
 
 ESLint configuration
-https://eslint.org/docs/user-guide/configuring
+<https://eslint.org/docs/user-guide/configuring>
 
 ESLint CLI
-https://eslint.org/docs/user-guide/command-line-interface
+<https://eslint.org/docs/user-guide/command-line-interface>
 
 Prettier installation
-https://prettier.io/docs/en/install.html
+<https://prettier.io/docs/en/install.html>
 
 Prettier with ESLint, TSLint
-https://prettier.io/docs/en/integrating-with-linters.html
+<https://prettier.io/docs/en/integrating-with-linters.html>
 
 Prettier configuration file:
-https://prettier.io/docs/en/configuration.html
+<https://prettier.io/docs/en/configuration.html>
 
 Prettier CLI
-https://prettier.io/docs/en/cli.html
+<https://prettier.io/docs/en/cli.html>
 
 lint-staged
-https://github.com/okonet/lint-staged
+<https://github.com/okonet/lint-staged>
 
 husky
-https://github.com/typicode/husky
+<https://github.com/typicode/husky>
 
+## Initial dependencies
 
+devDepencencies
 
-## Dependencies
-
-Webpack -D
 - webpack
 - webpack-cli
 
-React (-S)
+dependencies
+
 - react
 - react-dom
 
+## Setup for TypeScript
 
-## Setup TypeScript, loaders
+Install TypeScript locally with loaders as devDependencies
 
-Install TypeScript locally with loaders -D
 - typescript
-- ts-loader 
+- ts-loader
 - source-map-loader
 - ts-loader helps Webpack compile the TypeScript code using the TypeScript’s standard configuration file named tsconfig.json
 - source-map-loader uses any sourcemap outputs from TypeScript to inform webpack when generating its own sourcemaps. This will allow to debug the final output file as if you were debugging your original TypeScript source code
 
- React declaration files for TypeScript -D
+Install React declaration files for TypeScript as devDependencies
+
 - @types/react
 - @types/react-dom
 
-Compile: 
-> tsc fileName.ts
-> npx webpack
+Transpile:
 
+``` Nodejs
+> tsc <fileName>.ts
+```
+
+``` Nodejs
+> npx webpack
+```
 
 ## Linter: ESLint
 
-### Setup ESLint & config
+### Setup ESLint
 
 - npm install eslint -D
 - npx eslint --init
-    - Will ask about: JS, TS, React, JSON, etc
+  - Will ask about: JS, TS, React, JSON, etc
     - It will create an .eslintrc.json
     - It will add the following packages on -D:
-        + @typescript-eslint/parser@2.22.0
-        + eslint-plugin-react@7.19.0
-        + eslint@6.8.0
-        + eslint-plugin-import@2.20.1
-        + @typescript-eslint/eslint-plugin@2.22.0
-        + eslint-plugin-standard@4.0.1
-        + eslint-config-standard@14.1.0
-        + eslint-plugin-promise@4.2.1
-        + eslint-plugin-node@11.0.0
+      - @typescript-eslint/parser@2.22.0
+      - eslint-plugin-react@7.19.0
+      - eslint@6.8.0
+      - eslint-plugin-import@2.20.1
+      - @typescript-eslint/eslint-plugin@2.22.0
+      - eslint-plugin-standard@4.0.1
+      - eslint-config-standard@14.1.0
+      - eslint-plugin-promise@4.2.1
+      - eslint-plugin-node@11.0.0
 
 ### .eslintignore
 
@@ -93,13 +99,13 @@ Compile:
 - VS Code -> settings (ctrl+,) -> search for Eslint -> enable "Always show status", "Eslint: Enable", "Eslint > Format: Enable"
 - VS Code -> settigns (ctrl+,) -> search for Eslint validate -> make sure "Typescript > Validate: Enable" and "Javascript > Validate: Enable" are checked. If they are checked, nothing will be displayed in the settings.json. If they are not enabled, there will be key/values for this in settings.json, set to false.
 - settings.json (should not be nessessary):
-```
+
+``` JSON
    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 ```
-
 
 ### Functionality in console & editor
 
@@ -112,7 +118,7 @@ Compile:
 - See the ESLint docs for CLI
 - Run ESLint from npm script:
 
-```
+``` JSON
   "scripts": {
     "lint:test": "eslint src/**/*.{ts,tsx,js}",
     // Gives the errors in the console for the src folder
@@ -126,25 +132,25 @@ Compile:
 
 ## Formatter: Prettier
 
-Prettier -D -E
+Prettier locally
 
 - npm i -D -E prettier
 - We recommend pinning an exact version of prettier in your package.json as we introduce stylistic changes in patch releases
 - -E, --save-exact: Saved dependencies will be configured with an exact version rather than using npm’s default semver range operator.
 
 Or global:
+
 - npm i -g prettier
 - Prettier in CLI: Don't forget the quotes around the globs! The quotes make sure that Prettier expands the globs rather than your shell, for cross-platform usage. The glob syntax from the glob module is used.
 
+Integration with ESLint
 
-Integration with ESLint -D
-
-- eslint-config-prettier 
+- eslint-config-prettier
 - eslint-plugin-prettier
 - Disable formatting rules: eslint-config-prettier is a config that disables rules that conflict with Prettier. Add it to your devDependencies, then extend from it within your .eslintrc configuration. Make sure to put it last in the extends array, so it gets the chance to override other configs.
 - Use ESLint to run Prettier: eslint-plugin-prettier is a plugin that adds a rule that formats content using Prettier. Add it to your devDependencies, then enable the plugin and rule in .eslintrc.json:
 
-```
+``` JSON
 {
   "plugins": ["prettier"],
   "rules": {
@@ -152,14 +158,14 @@ Integration with ESLint -D
   }
 }
 ```
-- Recommended configuration. "plugin:prettier/recommended" exposes a "recommended" configuration that configures both eslint-plugin-prettier and eslint-config-prettier in a single step: 
 
-```
+- Recommended configuration. "plugin:prettier/recommended" exposes a "recommended" configuration that configures both eslint-plugin-prettier and eslint-config-prettier in a single step:
+
+``` JSON
 {
   "extends": ["plugin:prettier/recommended"]
 }
 ```
-
 
 ## Git hooks with Husky and lint-staged
 
@@ -188,14 +194,16 @@ Integration with ESLint -D
 - You need to first make changes to a file and then add them to git. Only those newly added files will be matched against the lint-staged key glob
 - To format files you haven't changed and added, use the npm scripts in package.json
 
-
 ## Deprecated
 
-Tslint (will be deprecated) + Prettier -D 
+Tslint (will be deprecated) + Prettier
+
 - prettier
 - tslint
 - tslint-config-prettier // disables conflicting rules
 - tslint-plugin-prettier
 - tslint-react // extra configuration for react projects
 
-> tslint -c tslint.json 'src/**/*.{ts,tsx}' 
+``` Nodejs
+> tslint -c tslint.json 'src/**/*.{ts,tsx}'
+```
